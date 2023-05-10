@@ -26,8 +26,8 @@ public class Flight {
     @Column(name = "airplane_id")
     private Integer airplaneId;
 
- //@OneToMany(fetch =FetchType.LAZY ,mappedBy="flight", cascade = CascadeType.ALL)
-   @OneToMany(mappedBy="flight")
+    //@OneToMany(fetch =FetchType.LAZY ,mappedBy="flight", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "flight")
     private List<BoardingPass> BoardingPassList;
 
 // Getters

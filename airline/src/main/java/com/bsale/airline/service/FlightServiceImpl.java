@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service("FlightService")
-public class FlightServiceImpl implements  IFlightService {
+public class FlightServiceImpl implements IFlightService {
 
     @Autowired
     @Qualifier("FlightRepository")
@@ -17,12 +17,12 @@ public class FlightServiceImpl implements  IFlightService {
 
     @Override
     public Optional<Flight> findById(Integer Id) {
-        return  crud.findById(Id);
+        return crud.findById(Id);
     }
 
     @Override
     public Flight buscarVuelo(Integer Id) {
-        return (Flight) crud. buscarVuelo(Id);
+        return (Flight) crud.buscarVuelo(Id);
     }
 
 }

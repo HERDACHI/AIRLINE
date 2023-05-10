@@ -1,6 +1,7 @@
 package com.bsale.airline.model;
 
 import javax.persistence.*;
+
 @Entity
 @Table(name = "boarding_pass")
 public class BoardingPass {
@@ -23,11 +24,11 @@ public class BoardingPass {
 
     //@ManyToOne(fetch = FetchType.LAZY)
     @ManyToOne
-    @JoinColumn(name="flight_id")
+    @JoinColumn(name = "flight_id")
     private Flight flight;
 
     @ManyToOne
-    @JoinColumn(name="passenger_id", insertable = false, updatable = false)
+    @JoinColumn(name = "passenger_id", insertable = false, updatable = false)
     private Passenger passenger;
 
 // Getters
@@ -35,27 +36,35 @@ public class BoardingPass {
     public Integer getBoardingPassId() {
         return boardingPassId;
     }
+
     public Integer getPurchaseId() {
         return purchaseId;
     }
+
     public Integer getPassengerId() {
         return passengerId;
     }
+
     public Integer getSeatTypeId() {
         return seatTypeId;
     }
+
     public Integer getSeatId() {
         return seatId;
     }
-    public String  getName() {
-        return  passenger.getName();
+
+    public String getName() {
+        return passenger.getName();
     }
-    public String  getCountry() {
-        return  passenger.getCountry();
+
+    public String getCountry() {
+        return passenger.getCountry();
     }
+
     public Integer getAge() {
-        return  passenger.getAge();
+        return passenger.getAge();
     }
+
     public String getDni() {
         return passenger.getDni();
     }
